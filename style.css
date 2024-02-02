@@ -1,0 +1,299 @@
+/* Apple colour - #ca2b16 */
+/* Dark Green - #5f7b28 */
+/* Light Green - #8cb569 */
+/* Background colour - #848f9a */
+/* Snake Colour - #1372a4 */
+
+/* Couldnt get @import to work so this works instead, locally downloaded fonts*/
+@Font-face {
+    font-family: 'sixtyfour';
+    src: url('icons/Sixtyfour-Regular.ttf');
+}
+
+body {
+    background-color: #8cb569;
+    color: #151314;
+    font-family: 'Gamja Flower';
+}
+
+header {
+    /* Positioning of banner */
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    height: 100px;
+}
+
+.bannerBox {
+    /*Centerbox of before mentioned grid*/
+    grid-column: 2/3;
+    /* Centralise banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#banner {
+    /*The actual banner with black border*/
+    /* Positioning  */
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    /* Size */
+    width: 90%;
+    height: 80%;
+    /* Border */
+    border: solid 2px black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#logoBox {
+    /* divides banner into sections */
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.bannerItems {
+    padding: 0px;
+    /* Centralize */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Font */
+    font-size: 40px;
+}
+
+.bannerItems div h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#time,
+#score {
+    /* Spacing between word and value of time/score */
+    margin-left: 15px;
+}
+
+#logo {
+    /* Logo size */
+    height: 70px;
+    width: 70px;
+}
+
+
+section {
+    /* Grid Setup */
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.sectionBox {
+    /* Positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Sizing */
+    height: 350px;
+}
+
+#scoreArea {
+    /* Positioning */
+    justify-content: end;
+}
+
+#gameArea {
+    grid-area: 1/2/2/3;
+}
+
+#controlArea {
+    /* Positioning */
+    justify-content: start;
+    grid-column: 3/4;
+}
+
+#scoreBox,
+.controlBox {
+    /* Sizing and defining side box areas */
+    border: 2px solid black;
+    height: 60%;
+    width: 70%;
+    border-radius: 10px;
+}
+
+#scoreBox {
+    /* Aligning words in highscore box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+#scoreBox h2 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+#scoreBox h3 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 60px;
+}
+
+.gameBox {
+    /* Sizing and defining center box area */
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+}
+
+.controlBox {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+    flex-direction: column;
+}
+
+.controlBox h2 {
+    padding-left: 15px;
+    margin: 0px;
+}
+
+.controlBox ul {
+    list-style-type: none;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.startBtnBox {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 10%;
+}
+
+#startBtn {
+    height: 100%;
+    width: 100%;
+    background-color: #8cb569;
+    border-radius: 10px;
+    font-family: 'Gamja Flower';
+    font-size: 25px;
+    transition: transform 0.2s;
+}
+
+#endBtnBox {
+    height: 20%;
+    width: 24%;
+    display: none;
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#restartBtn,
+#quitBtn {
+    background-color: #8cb569;
+    height: 80%;
+    width: 40%;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Gamja Flower';
+    transition: transform 0.2s;
+}
+
+#restartBtn:hover,
+#quitBtn:hover,
+#startBtn:hover {
+    transform: scale(1.2);
+
+}
+
+#gameOverMessage {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 1.25rem;
+    padding-bottom: 0px;
+}
+
+#gameOverMessage h2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#highScoreMessage {
+    display: none;
+    margin-left: 8px;
+}
+
+/* #highScoreMessage.pulseTransition{
+    transition: transform 0.2s;
+    transform: scale(1.2);
+    transition: transform 0.2s;
+    transform:scale(1.0)
+} */
+@keyframes highScorePulse {
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+.highScorePulse{
+    animation: highScorePulse 1s linear 0s 2;
+}
+
+.snake {
+    background-color: #1372a4;
+    border-radius: 10px;
+}
+
+.apple {
+    background-color: #d62a16;
+    border-radius: 50%;
+}
+
+@keyframes shake-horizontal {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: translateX(10px);
+    }
+
+    80% {
+        transform: translateX(8px);
+    }
+
+    90% {
+        transform: translateX(-8px);
+    }
+}
+
+.shake-horizontal {
+    animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}

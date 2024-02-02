@@ -1,0 +1,76 @@
+HEADER
+-top div will be grid - ratio 1:3:1
+-Inside box - use grid - ratio 2:1:2?
+--Left box - time
+---Increments by 1 each second
+---Measured and showed as seconds(no units)
+---No time limit just set to show the user how long the game has elapsed
+---Will need to have a div inside the div for the number and change innertext of that div
+--Middle box - title/logo
+---Simply put a logo for styling purposes
+--Right box - Score
+---Will increment up by 1 when an apple is eaten
+---There will technically be a max score, when the snake has taken up all squares, the apple can no longer spawn
+---Again will need a div for 'Score:' and a div for 'number' and change innerText of number
+
+MAIN
+-Grid - 1:2:1
+--Left High score
+---Not interactive - cant click or do anything just displays
+---compares users score to a text sheet that has users score saved inside
+---If its bigger Will display a message - 'High Score!!!'
+---Overwrites previous score with new highest score.
+--Right - Controls
+---Not interactive - cant click or do anything just displays
+---R - Runs restart game function
+-Middle - the game
+--flexbox centralise it
+--have it in a square box.
+--Split that box into a 10x10 box of square divs.
+
+THE GAME
+-Played inside a box containing 100 Div's, 10x10 square
+--Each div will be 1/10th width and height of parent div
+---E.g. if box is 300px, each div will be 30x30px
+-The snake
+--Need a startGame() function to determine when to make the snake begin
+---Will start moving right
+---Will be on click of a start button
+---The function will then hide the start button again until game is over.
+---When start is clicked
+----Time begins
+----Snake generated
+----Apple generated
+----snake begins moving
+--on key press will change direction and take note of the div num that changed.
+---All other segments will need to follow the head of the snakes movement
+--Snake hits apple
+---Snake grow
+---Apple disappear
+---Apple move to random place - NOT INSIDE THE SNAKE
+---Score++
+--Snake hits wall or itself
+---Game over
+---return to inital state of the game
+---Start screen
+----WILL NEED TO EXPLORE WAYS OF RESTARTING THE GAME BACK TO START SCREEN
+-----REFRESH PAGE? RESET VARIABLES? HMMMM?
+----Reset all variables
+---Initiate score comparison to high score
+---overwrite or don't
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

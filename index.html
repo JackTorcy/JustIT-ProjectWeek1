@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height = device-height, initial-scale=1.0, user-scalable=yes">
+    <title>Snake</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/x-icon" style.Color="white">
+    <link rel="stylesheet" href="style.css"> <!--link CSS-->
+    <script src="script.js" defer></script> <!--link JS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header> <!--Top section-->
+        <div class="bannerBox"> <!--Center of top section-->
+            <div id="banner"> <!--Banner inside center box-->
+                <!--Banner sections-->
+                <!-- Time -->
+                <div class="bannerItems">
+                    <!-- Time title: -->
+                    <div><h2>Time:</h2></div>
+                    <!-- Time value, changed in seconds -->
+                    <div><h2 id="time">0</h2></div>
+                </div>
+                <!-- Logo -->
+                <div class="bannerItems" id="logoBox">
+                    <!-- Snake logo image -->
+                    <img id="logo" src="icons/snake.png" alt="snake logo">
+                </div>
+                <!-- Score -->
+                <div class="bannerItems">
+                    <!-- Score title: -->
+                    <div><h2>Score:</h2></div>
+                    <!-- Score Value, changed when apple eaten -->
+                    <div><h2 id="score">0</h2></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <Section>
+        <div class="sectionBox" id="scoreArea">
+            <div id="scoreBox">
+                <h2>High score</h2>
+                <h3 id="highScore">0</h3>
+            </div>
+        </div>
+        </div>
+
+        <div class="sectionBox" id="gameArea">
+            <div class="startBtnBox">
+                <button id="startBtn" onclick="startGame()">Start</button>
+            </div>
+            <div id="endBtnBox">
+                <button id="restartBtn">Restart</button>
+                <button id="quitBtn" onclick="window.close()">Exit Game</button>
+            </div>
+            <div id="gameOverMessage">
+                <h2>GAME OVER!</h2>
+                <h2 id="highScoreMessage">NEW HIGH SCORE!</h2>
+            </div>
+
+            <main class="gameBox">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </main>
+        </div>
+        <div class="sectionBox" id="controlArea">
+            <div class="controlBox">
+                <h2>Controls</h2>
+                <ul>
+                    <li>> - Right</li>
+                    <li>
+                        < - Left</li>
+                    <li>/\ - Up</li>
+                    <li>\/ - Down</li>
+                </ul>
+            </div>
+        </div>
+    </Section>
+
+</body>
+
+</html>
