@@ -44,11 +44,13 @@ let highScoreTxt = document.getElementById('highScoreMessage')
 let highScore = 0
 //!SOUNDS
 const appleSound = new Audio('soundFiles/appleCollision.wav');
+appleSound.volume = 0.2
 const wallSound = new Audio('soundFiles/deathCollision.wav')
+wallSound.volume = 0.2
 //background music
-const bgSound = new Audio('soundFiles/bgMusic.mp3')
+let bgSound = new Audio('soundFiles/bgMusic.mp3')
 bgSound.loop=true
-bgSound.volume=0.1
+bgSound.volume=0.05
 bgSound.play()
 
 //!WHEN START BUTTON IS PRESSED

@@ -4,6 +4,10 @@
 /* Background colour - #848f9a */
 /* Snake Colour - #1372a4 */
 
+html{
+    zoom: 150%;
+}
+
 /*! MEDIA QUERIES  !*/
 @media screen and (max-width: 900px) {
      .bannerItems h2 {
