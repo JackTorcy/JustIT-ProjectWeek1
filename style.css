@@ -14,11 +14,20 @@
     #scoreBox h2 {
         font-size: 35px;
     }
+    .controlBox h2{
+        font-size: 35px;
+    }
 
 }
 @media screen and (max-width:775px){
     #scoreBox h2 {
     font-size: 25px;
+    }
+    .controlBox h2{
+        font-size: 25px;
+    }
+    .controlBox ul li{
+        font-size:20px;
     }
     #endBtnBox button{
         font-size: 16px;
@@ -143,17 +152,17 @@ section {
 #scoreBox {
     /* Aligning words in highscore box */
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     text-align: center;
     flex-direction: column;
-    font-size: 30px;
+    font-size: 27px;
 }
 
 #scoreBox h2 {
     /* Spacing */
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
 #scoreBox h3 {
@@ -175,21 +184,23 @@ section {
 
 .controlBox {
     display: flex;
-    justify-content: center;
-    align-items: start;
+    justify-content: start;
+    align-items: center;
     text-align: start;
     flex-direction: column;
+    font-size: 27px;
 }
 
 .controlBox h2 {
-    padding-left: 15px;
+    
     margin: 0px;
 }
 
 .controlBox ul {
     list-style-type: none;
-    padding-left: 15px;
+    padding-left:0px;
     margin-top: 10px;
+    margin-bottom:0px;
 }
 
 .startBtnBox {
