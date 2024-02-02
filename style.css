@@ -4,10 +4,30 @@
 /* Background colour - #848f9a */
 /* Snake Colour - #1372a4 */
 
-/* Couldnt get @import to work so this works instead, locally downloaded fonts*/
-@Font-face {
-    font-family: 'sixtyfour';
-    src: url('icons/Sixtyfour-Regular.ttf');
+/*! MEDIA QUERIES  !*/
+@media screen and (max-width: 900px) {
+     .bannerItems h2 {
+        font-size: 45px;
+    } 
+} 
+@media screen and (max-width:1000px){
+    #scoreBox h2 {
+        font-size: 35px;
+    }
+
+}
+@media screen and (max-width:775px){
+    #scoreBox h2 {
+    font-size: 25px;
+    }
+    #endBtnBox button{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:650px){
+    .bannerItems h2{
+        font-size: 30px;
+    }
 }
 
 body {
@@ -131,11 +151,13 @@ section {
 }
 
 #scoreBox h2 {
+    /* Spacing */
     margin-top: 0px;
     margin-bottom: 5px;
 }
 
 #scoreBox h3 {
+    /* Spacing */
     margin-top: 0px;
     margin-bottom: 30px;
     font-size: 60px;
@@ -236,25 +258,6 @@ section {
     margin-left: 8px;
 }
 
-/* #highScoreMessage.pulseTransition{
-    transition: transform 0.2s;
-    transform: scale(1.2);
-    transition: transform 0.2s;
-    transform:scale(1.0)
-} */
-@keyframes highScorePulse {
-    50% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1.0);
-    }
-}
-.highScorePulse{
-    animation: highScorePulse 1s linear 0s 2;
-}
-
 .snake {
     background-color: #1372a4;
     border-radius: 10px;
@@ -263,6 +266,16 @@ section {
 .apple {
     background-color: #d62a16;
     border-radius: 50%;
+}
+
+@keyframes highScorePulse {
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
 }
 
 @keyframes shake-horizontal {
@@ -296,4 +309,8 @@ section {
 
 .shake-horizontal {
     animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+.highScorePulse {
+    animation: highScorePulse 1s linear 0s 2;
 }

@@ -49,7 +49,7 @@ const wallSound = new Audio('soundFiles/deathCollision.wav')
 const bgSound = new Audio('soundFiles/bgMusic.mp3')
 bgSound.loop=true
 bgSound.volume=0.1
-// bgSound.play()
+bgSound.play()
 
 //!WHEN START BUTTON IS PRESSED
 function startGame() {
